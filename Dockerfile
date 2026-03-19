@@ -16,7 +16,7 @@ COPY --from=frontend-build /app/portal-ui/dist/ ./src/main/resources/static/
 RUN mvn package -DskipTests -B
 
 # ============ Stage 3: 运行 ============
-FROM openjdk:8-jre-slim
+FROM eclipse-temurin:8-jre
 WORKDIR /app
 COPY --from=backend-build /build/portal-server/target/portal-server-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
