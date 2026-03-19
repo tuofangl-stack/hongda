@@ -7,7 +7,10 @@ COPY portal-ui/ ./
 RUN npm run build
 
 # ============ Stage 2: 构建后端 ============
-FROM maven:3.8-openjdk-8 AS backend-build
+FROM debian:bullseye-slim AS backend-build
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    default-jdk maven \
+    && rm -rf /var/lib/apt/lists/*
 WORKDIR /build/portal-server
 COPY portal-server/pom.xml ./
 RUN mvn dependency:go-offline -B
