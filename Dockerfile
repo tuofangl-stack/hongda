@@ -16,7 +16,10 @@ COPY --from=frontend-build /app/portal-ui/dist/ ./src/main/resources/static/
 RUN mvn package -DskipTests -B
 
 # ============ Stage 3: 运行 ============
-FROM eclipse-temurin:8-jre
+FROM debian:bullseye-slim
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    default-jre-headless \
+    && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 COPY --from=backend-build /build/portal-server/target/portal-server-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
