@@ -25,20 +25,7 @@
 						</div>
 					</div>
 
-					<ul class="am-tabs-nav am-cf index-tab">
-						<li v-for="(tab,index) in tabList" :key="index" :class="tabIndex === index ? 'am-active':''" >
-							<a href="#" @click.prevent="changeTab(index)">
-								<div class="am-u-md-3 am-u-sm-3 am-padding-right-0">
-									<i :class="tab.icon"></i>
-								</div>
-								<div class="school-item-right am-u-md-9 am-u-sm-9 am-text-left">
-									<strong class="promo_slider_nav--item_title">{{tab.name}}</strong>
-									<p class="promo_slider_nav--item_description">{{tab.desc}}</p>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
+					</div>
 			</div>
 		</div>
 
@@ -98,12 +85,6 @@ export default {
 	components: {Layout},
 	data(){
 		return{
-			tabList:[
-				{name:'鸿达产品', desc:'一句话概括特点', icon:'am-icon-cog'},
-				{name:'鸿达配件', desc:'一句话概括特点', icon:'am-icon-lightbulb-o'},
-				{name:'鸿达汽车', desc:'一句话概括特点', icon:'am-icon-line-chart'},
-				{name:'关于我们', desc:'一句话概括特点', icon:'am-icon-hourglass-end'},
-			],
 			tabIndex: 0,
 			slideshow:[],
 
@@ -125,9 +106,6 @@ export default {
 		this.getSlideshow()
 	},
 	methods:{
-		changeTab(index){
-			this.tabIndex = index
-		},
 		getSlideshow(){
 			this.getRequest("/findAllSlideshow").then(resp =>{
 				if (resp){
