@@ -13,10 +13,10 @@
 									<div class="container">
 										<div class="am-g">
 											<div class="am-u-md-10 am-u-sm-centered" style="text-align: center">
-												<h1 class="slide_simple--title">企业移动化，首选云适配</h1>
+												<h1 class="slide_simple--title">专注精神和精湛工艺</h1>
 												<p class="slide_simple--text am-text-left" style="display: flex;justify-content: center">
-													全球领先的HTML5企业移动化解决方案供应商，安全高效的帮助您的企业移动化。云适配企业浏览器Enterploer,让企业安全迈进移动办公时代！
-												</p>
+                          年产能达到800万套，产值2400万元，人均产值高达63万元，用最小规模把汽车空调铜件做到极致，形成小而专的立身之本。
+                        </p>
 											</div>
 										</div>
 									</div>
@@ -24,7 +24,7 @@
 							</div>
 						</div>
 					</div>
-					
+
 					<ul class="am-tabs-nav am-cf index-tab">
 						<li v-for="(tab,index) in tabList" :key="index" :class="tabIndex === index ? 'am-active':''" >
 							<a href="#" @click.prevent="changeTab(index)">
@@ -41,7 +41,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="section">
 			<div class="container" style="max-width: 1160px;">
 				<div class="section--header">
@@ -50,7 +50,7 @@
 						全球领先HTML5企业移动化解决方案供应商，由前微软美国总部IE浏览器核心研发团队成员及移动互联网行业专家在美国西雅图创立,获得了微软创投的扶持以及晨兴资本、IDG资本、天创资本等国际顶级风投机构的投资。
 					</p>
 				</div>
-				
+
 				<div class="index-container">
 					<div class="am-g">
 						<div class="am-u-md-3" v-for="(advantage,index) in advantageList" :key="index">
@@ -64,7 +64,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<div class="section" style="border-bottom: 1px solid #e9e9e9; padding-top: 0">
 			<div class="container" style="max-width: 1160px;">
 				<div class="section--header">
@@ -74,7 +74,7 @@
 						<br>获得了微软创投的扶持以及晨兴资本、IDG资本、天创资本等国际顶级风投机构的投资。
 					</p>
 				</div>
-				
+
 				<div class="index-container">
 					<div class="am-g">
 						<div class="am-u-md-3" v-for="(service,index) in serviceList" :key="index">
@@ -99,14 +99,14 @@ export default {
 	data(){
 		return{
 			tabList:[
-				{name:'家用电梯', desc:'一句话概括特点', icon:'am-icon-cog'},
-				{name:'别墅电梯', desc:'一句话概括特点', icon:'am-icon-lightbulb-o'},
-				{name:'观光电梯', desc:'一句话概括特点', icon:'am-icon-line-chart'},
+				{name:'鸿达产品', desc:'一句话概括特点', icon:'am-icon-cog'},
+				{name:'鸿达配件', desc:'一句话概括特点', icon:'am-icon-lightbulb-o'},
+				{name:'鸿达汽车', desc:'一句话概括特点', icon:'am-icon-line-chart'},
 				{name:'关于我们', desc:'一句话概括特点', icon:'am-icon-hourglass-end'},
 			],
 			tabIndex: 0,
 			slideshow:[],
-			
+
 			advantageList:[
 				{id:1,cover:require('../assets/images/index/f01.jpg'),title:'简单的适配过程',desc:'用户可快速学习适配开发，通过丰富的组件库完成页面功能的移动化适配。'},
 				{id:2,cover:require('../assets/images/index/f01.jpg'),title:'简单的适配过程',desc:'用户可快速学习适配开发，通过丰富的组件库完成页面功能的移动化适配。'},

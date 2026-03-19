@@ -4,7 +4,7 @@
 		<div class="layout-container" style="width: 100%;">
 			<div class="page-header" style="max-height: 14px;"></div>
 			<div class="breadcrumb-box">
-				<div class="am-container">
+				<div class="container">
 					<ol class="am-breadcrumb">
 						<li><router-link to="/news">公司动态</router-link></li>
 						<li class="am-active">文章详情</li>

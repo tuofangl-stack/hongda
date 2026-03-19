@@ -12,7 +12,7 @@
 		</div>
 		<div class="layout-container" style="width: 100%">
 			<div class="breadcrumb-box">
-				<div class="am-container">
+				<div class="container">
 					<ol class="am-breadcrumb">
 						<li><router-link to="/">首页</router-link></li>
 						<li class="am-active">产品中心</li>

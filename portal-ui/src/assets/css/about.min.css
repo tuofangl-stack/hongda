@@ -209,3 +209,58 @@
     font-size: 14px;
     color: #969696
 }
+
+@media screen and (max-width: 640px) {
+    .about-container {
+        margin-top: 32px
+    }
+
+    .about-container .our-company-text {
+        padding-right: 0
+    }
+
+    .about-container .our-company-text h3 {
+        font-size: 20px
+    }
+
+    .about-container .our-company-text p {
+        font-size: 14px;
+        line-height: 26px
+    }
+
+    .about-container .our-company-quote {
+        margin-top: 20px;
+        padding: 16px
+    }
+
+    .about-container .our-company-quote .our-company-brief {
+        font-size: 14px;
+        line-height: 24px
+    }
+
+    .our-mission .our_mission--item {
+        margin-top: 20px;
+        padding: 14px
+    }
+
+    .our-mission .our_mission--item .our_mission--item_media img {
+        height: 150px
+    }
+
+    .our-mission .our_mission--item .our_mission--item_title {
+        font-size: 18px
+    }
+
+    .our-team .team-box {
+        margin-top: 20px
+    }
+
+    .our-team .team-box .team_member--body {
+        padding: 18px
+    }
+
+    .our-team .team-box .team_member--body .team_member--position {
+        font-size: 14px;
+        line-height: 22px
+    }
+}

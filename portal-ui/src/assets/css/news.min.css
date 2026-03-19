@@ -3,40 +3,45 @@
 }
 
 .blog .article {
-    margin: 0 0 100px
+    margin: 0 0 46px;
+    padding: 18px;
+    border: 1px solid rgba(116, 144, 196, .14);
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, .98), rgba(243, 247, 255, 1));
+    box-shadow: 0 16px 36px rgba(11, 29, 52, .08)
 }
 
 .blog .article .article-img {
     overflow: hidden;
-    border-radius: 3px;
-    margin: 0 0 26px;
+    border-radius: 16px;
+    margin: 0 0 22px;
 }
 
 .blog .article .article-img img {
     width: 100%;
-    height: 200px;
+    height: 220px;
+    object-fit: cover;
 }
 
 .blog .article .article-header {
-    verflow: hidden;
+    overflow: hidden;
     border-radius: 3px;
     margin: 0 0 13px
 }
 
 .blog .article .article-header h2 {
-    font-size: 20px;
-    line-height: 20px;
-    font-weight: 400;
-
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 600;
     overflow:hidden;
     text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
 }
 
 .blog .article .article-header h2 a {
-    color: #262626
+    color: #16253b
 }
 
 .blog .article .article-header .article--meta {
@@ -47,16 +52,15 @@
     display: inline-block;
     position: relative;
     font-size: 14px;
-    color: #969696;
+    color: #7a8ba3;
     margin: 0;
 }
 
 .blog .article .article--content {
     font-size: 16px;
-    line-height: 23px;
-    color: #969696;
-    height: 70px;
-
+    line-height: 26px;
+    color: #6a7a90;
+    min-height: 78px;
     overflow:hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 3;
@@ -65,28 +69,43 @@
 }
 
 .blog .article .article--content p {
-    font-size: 14px
+    font-size: 14px;
+    margin: 0
 }
 
 .blog .article .article--footer .link {
-    font-size: 16px;
-    color: #59bcdb
+    font-size: 15px;
+    color: #4d79ff
 }
 
 .blog .article .article--footer .link:after {
     content: "\f178";
-    color: #59bcdb;
+    color: #4d79ff;
     margin-left: 8px
 }
 
 .blog .am-pagination {
     margin: 0 auto;
-    width: 365px
+    width: fit-content;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px
 }
 
 @media screen and (max-width: 640px) {
     .blog .article {
-        margin: 0 0 50px !important
+        margin: 0 0 24px !important;
+        padding: 14px;
+    }
+
+    .blog .article .article-img img {
+        height: 190px;
+    }
+
+    .blog .article .article-header h2 {
+        font-size: 18px;
     }
 }
 

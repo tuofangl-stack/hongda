@@ -44,8 +44,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("四川XXXX有限公司")
-                .description("四川XXXX有限公司——接口文档")
+                .title("汨罗市鸿达制冷")
+                .description("汨罗市鸿达制冷——接口文档")
                 .contact(new Contact("京茶吉鹿", "http:localhost:8888/doc.html", "jc.jingchao@qq.com"))
                 .version("1.0.0")
                 .termsOfServiceUrl("http://localhost:8888")
