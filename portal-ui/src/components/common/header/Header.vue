@@ -102,11 +102,11 @@ export default {
 .header{
 	max-width: 1240px;
 	margin: 0 auto;
-	padding: 22px 24px 18px;
+	padding: 12px 20px 10px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 24px;
+	gap: 16px;
 	transition: transform .3s ease, opacity .3s ease;
 }
 
@@ -117,22 +117,22 @@ export default {
 .header-left{
 	display: flex;
 	align-items: center;
-	gap: 18px;
+	gap: 12px;
 	min-width: 0;
 }
 
 .brand-mark{
-	width: 72px;
-	height: 72px;
-	border-radius: 22px;
+	width: 48px;
+	height: 48px;
+	border-radius: 14px;
 	background: rgba(7, 18, 32, 0.78);
 	border: 1px solid rgba(112, 166, 255, 0.24);
-	box-shadow: 0 18px 40px rgba(7, 18, 32, 0.18);
+	box-shadow: 0 8px 20px rgba(7, 18, 32, 0.14);
 	backdrop-filter: blur(14px);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 12px;
+	padding: 8px;
 }
 
 .brand-mark img{
@@ -143,27 +143,27 @@ export default {
 .brand-copy{
 	display: flex;
 	flex-direction: column;
-	gap: 4px;
+	gap: 1px;
 	color: #dbe7ff;
 }
 
 .brand-copy__eyebrow{
-	font-size: 12px;
-	letter-spacing: .28em;
+	font-size: 10px;
+	letter-spacing: .22em;
 	text-transform: uppercase;
 	color: rgba(135, 192, 255, 0.72);
 }
 
 .brand-copy strong{
-	font-size: 22px;
-	line-height: 1.2;
+	font-size: 16px;
+	line-height: 1.3;
 	color: #ffffff;
 }
 
 .brand-copy p{
 	margin: 0;
-	font-size: 13px;
-	line-height: 1.7;
+	font-size: 11px;
+	line-height: 1.5;
 	color: rgba(219, 231, 255, 0.68);
 }
 
@@ -171,30 +171,30 @@ export default {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 16px;
+	gap: 10px;
 	flex-wrap: wrap;
 }
 
 .header-item{
 	display: flex;
 	align-items: center;
-	gap: 14px;
-	padding: 14px 18px;
-	border-radius: 20px;
+	gap: 10px;
+	padding: 8px 14px;
+	border-radius: 14px;
 	background: rgba(7, 18, 32, 0.6);
 	border: 1px solid rgba(120, 154, 255, 0.18);
-	box-shadow: 0 12px 30px rgba(5, 12, 24, 0.12);
+	box-shadow: 0 6px 16px rgba(5, 12, 24, 0.1);
 	backdrop-filter: blur(14px);
 }
 
 .contact-icon{
-	width: 44px;
-	height: 44px;
-	border-radius: 14px;
+	width: 34px;
+	height: 34px;
+	border-radius: 10px;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 22px;
+	font-size: 16px;
 	background: linear-gradient(135deg, rgba(65, 176, 255, 0.18), rgba(122, 100, 255, 0.24));
 	color: #88d4ff;
 	box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
@@ -207,20 +207,20 @@ export default {
 }
 
 .item-label{
-	font-size: 12px;
-	letter-spacing: .16em;
+	font-size: 10px;
+	letter-spacing: .14em;
 	text-transform: uppercase;
 	color: rgba(147, 176, 221, 0.72);
 }
 
 .item strong{
-	font-size: 16px;
+	font-size: 14px;
 	color: #f7fbff;
 }
 
 .item span{
-	font-size: 12px;
-	line-height: 1.6;
+	font-size: 11px;
+	line-height: 1.4;
 	color: rgba(208, 221, 241, 0.72);
 }
 
@@ -228,7 +228,7 @@ export default {
 	flex-shrink: 0;
 	display: flex;
 	align-items: center;
-	gap: 12px;
+	gap: 8px;
 }
 
 .lang-switcher {
@@ -238,12 +238,12 @@ export default {
 .lang-btn {
 	display: inline-flex;
 	align-items: center;
-	padding: 10px 16px;
+	padding: 7px 12px;
 	border-radius: 999px;
 	background: rgba(7, 18, 32, 0.6);
 	border: 1px solid rgba(120, 154, 255, 0.18);
 	color: rgba(226, 235, 255, 0.85);
-	font-size: 13px;
+	font-size: 12px;
 	cursor: pointer;
 	transition: all 0.3s ease;
 	backdrop-filter: blur(14px);
@@ -293,14 +293,14 @@ export default {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 14px 26px;
+	padding: 9px 20px;
 	border-radius: 999px;
 	background: linear-gradient(135deg, #39c3ff 0%, #6f7bff 100%);
-	box-shadow: 0 16px 32px rgba(65, 149, 255, 0.28);
+	box-shadow: 0 8px 20px rgba(65, 149, 255, 0.22);
 	color: #fff;
-	font-size: 14px;
+	font-size: 13px;
 	font-weight: 600;
-	letter-spacing: .08em;
+	letter-spacing: .06em;
 	text-decoration: none;
 	transition: transform .3s ease, box-shadow .3s ease, filter .3s ease;
 }
