@@ -48,6 +48,26 @@ module.exports = {
       '/entrance': {
         target: 'http://localhost:8888',
         changeOrigin: true,
+      },
+      '/productList': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+      },
+      '/productListByType': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+      },
+      '/productDetail': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+      },
+      '/productTypes': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
+      },
+      '/find': {
+        target: 'http://localhost:8888',
+        changeOrigin: true,
       }
     }
   }

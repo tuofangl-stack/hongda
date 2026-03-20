@@ -3,45 +3,53 @@
 		<div class="header" :class="{ 'header--compact': isScrolled }">
 			<div class="header-left">
 				<div class="brand-mark">
-					<img src="../../../assets/images/hongdalogo.png" alt="汨罗市鸿达制冷">
+					<img src="../../../assets/images/hongdalogo.png" alt="Hongda">
 				</div>
 				<div class="brand-copy">
 					<span class="brand-copy__eyebrow">HONGDA REFRIGERATION</span>
-					<strong>精密制造 · 品质制冷配件</strong>
-					<p>专注汽车空调铜件与配件工艺，打造更稳定的交付能力。</p>
+					<strong>{{ $t('header.brandSlogan') }}</strong>
+					<p>{{ $t('header.brandDesc') }}</p>
 				</div>
 			</div>
 			<div class="header-mid">
 				<div class="header-item">
 					<span class="contact-icon am-icon-phone"></span>
 					<div class="item">
-						<span class="item-label">服务热线</span>
+						<span class="item-label">{{ $t('header.hotline') }}</span>
 						<strong>15111129199</strong>
-						<span>周一 ~ 周五，08:30 - 17:30</span>
+						<span>{{ $t('header.hotlineTime') }}</span>
 					</div>
 				</div>
 				<div class="header-item">
 					<span class="contact-icon am-icon-map-marker"></span>
 					<div class="item">
-						<span class="item-label">生产基地</span>
-						<strong>湖南省汨罗市大荆镇</strong>
-						<span>汨罗市鸿达制冷制造中心</span>
+						<span class="item-label">{{ $t('header.factory') }}</span>
+						<strong>{{ $t('header.factoryAddr') }}</strong>
+						<span>{{ $t('header.factoryName') }}</span>
 					</div>
 				</div>
 			</div>
 			<div class="header-right">
-				<a href="tel:+15111129199" class="header-cta">联系我们</a>
+				<a href="tel:+15111129199" class="header-cta">{{ $t('header.contactUs') }}</a>
+				<div class="lang-switcher">
+					<span class="lang-btn" @click="langOpen = !langOpen">🌐 {{ $t('lang.' + $i18n.locale) }} ▾</span>
+					<ul class="lang-dropdown" v-show="langOpen">
+						<li @click="switchLang('en')" :class="{ active: $i18n.locale === 'en' }">English</li>
+						<li @click="switchLang('zh')" :class="{ active: $i18n.locale === 'zh' }">中文</li>
+						<li @click="switchLang('fr')" :class="{ active: $i18n.locale === 'fr' }">Français</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
 		<div class="nav-wrapper header-default" :class="{ sticky: isScrolled }">
 			<div class="nav">
 				<ul class="am-nav am-nav-pills am-nav-justify">
-					<li><router-link class="router" to="/index">网站首页</router-link></li>
-					<li><router-link class="router" to="/product">产品中心</router-link></li>
-					<li><router-link class="router" to="/example">客户案例</router-link></li>
-					<li><router-link class="router" to="/news">公司动态</router-link></li>
-					<li><router-link class="router" to="/about">关于我们</router-link></li>
+					<li><router-link class="router" to="/index">{{ $t('nav.home') }}</router-link></li>
+					<li><router-link class="router" to="/product">{{ $t('nav.products') }}</router-link></li>
+					<li><router-link class="router" to="/example">{{ $t('nav.cases') }}</router-link></li>
+					<li><router-link class="router" to="/news">{{ $t('nav.news') }}</router-link></li>
+					<li><router-link class="router" to="/about">{{ $t('nav.about') }}</router-link></li>
 				</ul>
 			</div>
 		</div>
@@ -54,6 +62,7 @@ export default {
 	data(){
 		return{
 			isScrolled: false,
+			langOpen: false,
 		}
 	},
 	methods: {
@@ -61,9 +70,18 @@ export default {
 			const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
 			this.isScrolled = scrolled > 100;
 		},
+		switchLang(lang) {
+			this.$i18n.locale = lang
+			localStorage.setItem('portal_lang', lang)
+			this.langOpen = false
+		}
 	},
 	created() {
 		window.addEventListener('scroll', this.toggleStickyHeader);
+		// close lang dropdown on outside click
+		document.addEventListener('click', (e) => {
+			if (!e.target.closest('.lang-switcher')) this.langOpen = false
+		})
 	},
 	mounted() {
 		this.toggleStickyHeader();
@@ -71,7 +89,6 @@ export default {
 	beforeDestroy() {
 		window.removeEventListener('scroll', this.toggleStickyHeader);
 	}
-
 }
 </script>
 
@@ -209,6 +226,67 @@ export default {
 
 .header-right{
 	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.lang-switcher {
+	position: relative;
+}
+
+.lang-btn {
+	display: inline-flex;
+	align-items: center;
+	padding: 10px 16px;
+	border-radius: 999px;
+	background: rgba(7, 18, 32, 0.6);
+	border: 1px solid rgba(120, 154, 255, 0.18);
+	color: rgba(226, 235, 255, 0.85);
+	font-size: 13px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	backdrop-filter: blur(14px);
+	letter-spacing: 0.04em;
+}
+
+.lang-btn:hover {
+	background: rgba(7, 18, 32, 0.8);
+	border-color: rgba(120, 154, 255, 0.36);
+}
+
+.lang-dropdown {
+	position: absolute;
+	top: calc(100% + 6px);
+	right: 0;
+	list-style: none;
+	margin: 0;
+	padding: 6px 0;
+	min-width: 140px;
+	background: rgba(10, 20, 38, 0.95);
+	border: 1px solid rgba(120, 154, 255, 0.2);
+	border-radius: 12px;
+	box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+	backdrop-filter: blur(18px);
+	z-index: 10000;
+}
+
+.lang-dropdown li {
+	padding: 10px 18px;
+	font-size: 14px;
+	color: rgba(226, 235, 255, 0.75);
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.lang-dropdown li:hover {
+	background: rgba(57, 195, 255, 0.1);
+	color: #fff;
+}
+
+.lang-dropdown li.active {
+	color: #39c3ff;
+	font-weight: 600;
 }
 
 .header-cta{

@@ -1,17 +1,17 @@
 <template>
 	<Layout>
-		<div class="gallery-box" v-if="title !== '' && photos.length > 0">
+		<div class="gallery-box" v-if="product">
 			
 			<div class="layout-container" style="width: 100%">
 				<div class="solution-page">
 					<div class="container">
-						<h2>{{title}}</h2>
-						<p>{{introduction}}</p>
+						<h2>{{product.name}}</h2>
+						<p>{{product.description}}</p>
 					</div>
 				</div>
 			</div>
 			
-			<div class="gallery">
+			<div class="gallery" v-if="photos.length > 0">
 				<div class="active-photo" :style="'background-image: url('+ photos[activePhoto]+');'">
 					<button type="button"
 						aria-label="Previous Photo"
@@ -36,6 +36,12 @@
 					</div>
 				</div>
 			</div>
+
+			<div class="product-info" v-if="product.price">
+				<span class="product-detail-price">¥{{Number(product.price).toLocaleString()}}</span>
+				<span class="product-detail-sales" v-if="product.sales">{{ $t('productDetail.sold') }} {{product.sales}} {{ $t('productDetail.unit') }}</span>
+				<span class="product-detail-views" v-if="product.views">{{ $t('productDetail.views') }} {{product.views}} {{ $t('productDetail.times') }}</span>
+			</div>
 		</div>
 		
 	</Layout>
@@ -48,44 +54,38 @@ export default {
 	components: {Layout},
 	data(){
 		return{
-			title: '',
-			introduction:'',
+			product: null,
 			activePhoto: 0,
 			photos: []
 		}
 	},
 	mounted() {
 		this.getProductById(this.$route.params.productId)
-		/*document.addEventListener("keydown", (event) => {
-			if (event.which === 37)
-				this.previousPhoto()
-			if (event.which === 39)
-				this.nextPhoto()
-		})*/
 	},
 	methods:{
-		getProductById(typeDetailsId){
-			this.getRequest(`/findTypeDetailsByTypeDetailsId/${typeDetailsId}`).then(resp =>{
+		getProductById(productId){
+			this.getRequest(`/productDetail/${productId}`).then(resp =>{
 				if (resp){
-					const temp = resp.data.data
-					this.title = temp.title
-					this.introduction = temp.introduction
-					console.log(temp)
+					const data = resp.data.data
+					this.product = data
 					
+					// 构建图片列表
 					const photos = [];
-					for (let i = 1; i < 6; i++) {
-						// 判断是否为空
-						if (temp['imageUrl'+ i] != null){
-							// 判断是否有重复
-							if (!photos.includes(temp['imageUrl'+ i])){
-								photos.push(temp['imageUrl'+ i])
-							}
+					if (data.cover) photos.push(data.cover)
+					// 解析images JSON数组
+					if (data.images) {
+						try {
+							const imgs = JSON.parse(data.images)
+							imgs.forEach(img => {
+								if (img && !photos.includes(img)) photos.push(img)
+							})
+						} catch(e) {
+							// images不是JSON，当作单个URL
+							if (!photos.includes(data.images)) photos.push(data.images)
 						}
 					}
 					this.photos = photos
-					//console.log(this.photos)
 				}
-				//console.log(this.produce)
 			})
 		},
 		nextPhoto () {
@@ -99,19 +99,13 @@ export default {
 </script>
 
 <style scoped>
-
-* {
-	outline: none;
-	box-sizing: border-box;
-}
+* { outline: none; box-sizing: border-box; }
 
 .gallery-box {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	overflow: auto;
-	/*background-color: #5c4084;*/
-	/*background-color: rgba(16 18 27 / 10%);*/
 	text-align: center;
 	width: 100%;
 }
@@ -140,7 +134,6 @@ export default {
 	border: none;
 	background-color: transparent;
 	font-size: 30px;
-	/*color: #fff;*/
 	color: #59bcdb;
 	opacity: 0.5;
 	position: absolute;
@@ -148,24 +141,16 @@ export default {
 	height: 100%;
 }
 
-.gallery-box .gallery .active-photo:hover {
-	opacity: 1;
-}
+.gallery-box .gallery .active-photo:hover { opacity: 1; }
 .gallery-box .gallery .active-photo .previous {
 	padding: 0 1em 0 0.7em;
 	left: 0;
-	background: -moz-linear-gradient(left,  rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
-	background: -webkit-linear-gradient(left,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
-	background: linear-gradient(to right,  rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80000000', endColorstr='#00000000',GradientType=1 );
+	background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
 }
 .gallery-box .gallery .active-photo .next {
 	padding: 0 0.7em 0 1em;
 	right: 0;
-	background: -moz-linear-gradient(left,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
-	background: -webkit-linear-gradient(left,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
-	background: linear-gradient(to right,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=1 );
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 100%);
 }
 
 .gallery-box .gallery .thumbnails {
@@ -181,14 +166,23 @@ export default {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	opacity: 1;
 }
-.thumbnails:hover {
-	/*opacity: 0.6;*/
- }
-.thumbnails .active {
-	outline-color: #59bcdb;
-	opacity: 0.6;
- }
+.thumbnails .active { outline-color: #59bcdb; opacity: 0.6; }
 
+.product-info {
+	display: flex;
+	gap: 24px;
+	align-items: baseline;
+	padding: 16px 0 40px;
+}
+.product-detail-price {
+	font-size: 28px;
+	font-weight: 700;
+	color: #e74c3c;
+}
+.product-detail-sales,
+.product-detail-views {
+	font-size: 14px;
+	color: #999;
+}
 </style>

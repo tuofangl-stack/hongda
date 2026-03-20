@@ -1,12 +1,10 @@
 <template>
 	<Layout>
-		<!--<div class="product-background"></div>-->
-		
 		<div class="layout-container" style="width: 100%">
-			<div class="solution-page">
+			<div class="page-header">
 				<div class="container" style="text-align: center">
-					<h2>自主创新跨平台企业级解决方案</h2>
-					<p>光明网曾考虑过通过原生App来实现移动化，但是由于无法复用原始业务流程和数据就放弃了，直到选用了云适配整体解决方案后，可以很方便的在Enterplorer上使用一个帐号登录我们的系统，通过VPN随时进入内网。</p>
+					<h1 class="page-header-title">{{ $t('product.pageTitle') }}</h1>
+					<p class="page-header-subtitle">{{ $t('product.pageSubtitle') }}</p>
 				</div>
 			</div>
 		</div>
@@ -14,31 +12,37 @@
 		<div class="section">
 			<div class="container" style="max-width: 1160px">
 				<div class="section--header">
-					<h2 class="section--title">解决方案案例展示</h2>
-					<p class="section--description">
-						全球独创专利技术：一行代码部署，帮助企业快速安全地将现有PC版网页适配成HTML5跨屏网页，跨平台的企业统一办公 门户，快捷的移动适配开发能力，完备的数据安全保护
-					</p>
+					<h2 class="section--title">{{ $t('product.sectionTitle') }}</h2>
+					<p class="section--description">{{ $t('product.sectionDesc') }}</p>
 				</div>
 				
 				<div class="solution-container">
-					<div data-am-widget="tabs" class="am-tabs ">
+					<div data-am-widget="tabs" class="am-tabs">
 						<ul class="am-tabs-nav am-cf">
+							<li @click.prevent="changeTab(-1)"
+								:class="selectedType === -1 ? 'am-active':''">
+								<a href="#">{{ $t('product.tabAll') }}</a>
+							</li>
 							<li v-for="(tab,index) in tabList"
 								:key="index"
-								@click.prevent="changeTab(index,tab.typeId)"
-								:class="tabIndex === index ? 'am-active':''">
+								@click.prevent="changeTab(tab.typeId)"
+								:class="selectedType === tab.typeId ? 'am-active':''">
 								<a href="#">{{tab.typeName}}</a>
 							</li>
 						</ul>
 						<div class="am-tabs-bd">
-							<div class=am-tabs-tab>
+							<div class="am-tabs-tab">
 								<div class="am-tab"
 									v-for="(goods,index) in goodsList"
 									:key="index"
-									@click="handleDetails(goods.typeDetaisId)">
-									<img :src="goods.imageUrl1" alt="">
-									<p>{{goods.title}}</p>
+									@click="handleDetails(goods.productId)">
+									<img :src="goods.cover" alt="">
+									<p>{{goods.name}}</p>
+									<span class="product-price" v-if="goods.price">¥{{Number(goods.price).toLocaleString()}}</span>
 								</div>
+							</div>
+							<div v-if="goodsList.length === 0" style="text-align:center;padding:60px 0;color:#999;">
+								{{ $t('product.noProducts') }}
 							</div>
 						</div>
 					</div>
@@ -57,34 +61,41 @@ export default {
 	data(){
 		return{
 			tabList:[],
-			list:[],
-			tabIndex: 0,
+			selectedType: -1,
 			goodsList:[],
 		}
 	},
 	mounted() {
 		this.getTabList()
-		this.getGoodsList(1)
+		this.getAllProducts()
 	},
 	methods:{
 		getTabList(){
 			this.getRequest("/findAllType").then(resp =>{
 				if (resp){
 					this.tabList = resp.data.data
-					//console.log(resp.data.data)
 				}
 			})
 		},
-		changeTab(index,typeId){
-			this.tabIndex = index
-			console.log(typeId)
-			this.getGoodsList(typeId)
+		changeTab(typeId){
+			this.selectedType = typeId
+			if (typeId === -1) {
+				this.getAllProducts()
+			} else {
+				this.getProductsByType(typeId)
+			}
 		},
-		getGoodsList(typeId){
-			this.getRequest(`/findTypeDetailsByTypeId/${typeId}`).then(resp =>{
+		getAllProducts(){
+			this.getRequest("/productList").then(resp =>{
 				if (resp){
 					this.goodsList = resp.data.data
-					//console.log(resp.data.data)
+				}
+			})
+		},
+		getProductsByType(typeId){
+			this.getRequest(`/productListByType/${typeId}`).then(resp =>{
+				if (resp){
+					this.goodsList = resp.data.data
 				}
 			})
 		},
@@ -96,5 +107,11 @@ export default {
 </script>
 
 <style scoped>
-
+.product-price {
+	display: block;
+	color: #e74c3c;
+	font-weight: 600;
+	font-size: 14px;
+	margin-top: 4px;
+}
 </style>

@@ -3,8 +3,8 @@
 		<div class="layout-container" style="width: 100%">
 			<div class="page-header">
 				<div class="container" style="text-align: center">
-					<h1 class="page-header-title">公司动态</h1>
-					<p class="page-header-subtitle">分享鸿达制冷在产品、制造、合作与服务方面的最新资讯与行业动向。</p>
+					<h1 class="page-header-title">{{ $t('news.pageTitle') }}</h1>
+					<p class="page-header-subtitle">{{ $t('news.pageSubtitle') }}</p>
 				</div>
 			</div>
 		</div>
@@ -12,11 +12,8 @@
 		<div class="section">
 			<div class="container" style="max-width: 1160px">
 				<div class="section--header">
-					<h2 class="section--title">最近新闻</h2>
-					<p class="section--description">
-						云适配与中建材信息技术股份有限公司（以下简称“中建信息”）联合举办的“战略
-						<br>合作签约仪式暨全国跨屏行动启动大会”在北京成功举办。
-					</p>
+					<h2 class="section--title">{{ $t('news.sectionTitle') }}</h2>
+					<p class="section--description">{{ $t('news.sectionDesc') }}</p>
 				</div>
 				
 				<div class="news-contaier">
@@ -37,7 +34,7 @@
 										<p>{{article.introduction}}</p>
 									</div>
 									<div class="article--footer">
-										<router-link :to="{name:'newsDetails',params:{newsId:article.articleId}}" class="link">查看更多</router-link>
+										<router-link :to="{name:'newsDetails',params:{newsId:article.articleId}}" class="link">{{ $t('news.readMore') }}</router-link>
 									</div>
 								</div>
 							</div>
@@ -89,8 +86,6 @@ export default {
 			this.getRequest(`/findArticles/${pageIndex}`).then(resp =>{
 				if (resp){
 					this.articles = resp.data.data
-					console.log(this.articles)
-					
 				}
 			})
 		},
