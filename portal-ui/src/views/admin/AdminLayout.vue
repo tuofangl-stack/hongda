@@ -16,9 +16,21 @@
             <i class="el-icon-data-analysis"></i>
             <span>数据面板</span>
           </el-menu-item>
+          <el-submenu index="frontend-group">
+            <template slot="title"><i class="el-icon-monitor"></i><span>前台内容</span></template>
+            <el-menu-item index="/admin/slideshow">
+              <i class="el-icon-picture-outline"></i><span>轮播图</span>
+            </el-menu-item>
+            <el-menu-item index="/admin/typeDetails">
+              <i class="el-icon-box"></i><span>产品展示</span>
+            </el-menu-item>
+            <el-menu-item index="/admin/article">
+              <i class="el-icon-document"></i><span>文章动态</span>
+            </el-menu-item>
+          </el-submenu>
           <el-menu-item index="/admin/product">
             <i class="el-icon-goods"></i>
-            <span>产品管理</span>
+            <span>商品管理</span>
           </el-menu-item>
           <el-menu-item index="/admin/sale">
             <i class="el-icon-shopping-cart-full"></i>
@@ -52,6 +64,9 @@ export default {
       const path = this.$route.path
       if (path.startsWith('/admin/product')) return '/admin/product'
       if (path.startsWith('/admin/sale')) return '/admin/sale'
+      if (path.startsWith('/admin/article')) return '/admin/article'
+      if (path.startsWith('/admin/slideshow')) return '/admin/slideshow'
+      if (path.startsWith('/admin/typeDetails')) return '/admin/typeDetails'
       return path
     },
     nickname() {

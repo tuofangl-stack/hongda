@@ -107,4 +107,76 @@ export function getUploadHeaders() {
   }
 }
 
+// ========== 文章管理 ==========
+export function getArticleList(params) {
+  return adminApi.get('/admin/article/list', { params })
+}
+
+export function getArticle(id) {
+  return adminApi.get('/admin/article/' + id)
+}
+
+export function addArticle(data) {
+  return adminApi.post('/admin/article', data)
+}
+
+export function updateArticle(data) {
+  return adminApi.put('/admin/article', data)
+}
+
+export function deleteArticle(id) {
+  return adminApi.delete('/admin/article/' + id)
+}
+
+// ========== 轮播图管理 ==========
+export function getSlideshowList() {
+  return adminApi.get('/admin/slideshow/list')
+}
+
+export function addSlideshow(data) {
+  return adminApi.post('/admin/slideshow', data)
+}
+
+export function updateSlideshow(data) {
+  return adminApi.put('/admin/slideshow', data)
+}
+
+export function deleteSlideshow(id) {
+  return adminApi.delete('/admin/slideshow/' + id)
+}
+
+// ========== 前台产品管理(TypeDetails) ==========
+export function getTypeList() {
+  return adminApi.get('/admin/typeDetails/types')
+}
+
+export function addType(data) {
+  return adminApi.post('/admin/typeDetails/type', data)
+}
+
+export function deleteType(id) {
+  return adminApi.delete('/admin/typeDetails/type/' + id)
+}
+
+export function getTypeDetailsList(params) {
+  return adminApi.get('/admin/typeDetails/list', { params })
+}
+
+export function getTypeDetails(id) {
+  return adminApi.get('/admin/typeDetails/' + id)
+}
+
+export function addTypeDetails(data) {
+  return adminApi.post('/admin/typeDetails', data)
+}
+
+export function updateTypeDetails(data) {
+  return adminApi.put('/admin/typeDetails', data)
+}
+
+export function deleteTypeDetails(id) {
+  return adminApi.delete('/admin/typeDetails/' + id)
+}
+
 export default adminApi
+

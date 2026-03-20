@@ -86,6 +86,24 @@ const routes = [
                 name: 'AdminSale',
                 component: () => import('../views/admin/Sale.vue'),
                 meta: { title: '销售记录' }
+            },
+            {
+                path: 'article',
+                name: 'AdminArticle',
+                component: () => import('../views/admin/ArticleManage.vue'),
+                meta: { title: '文章管理' }
+            },
+            {
+                path: 'slideshow',
+                name: 'AdminSlideshow',
+                component: () => import('../views/admin/SlideshowManage.vue'),
+                meta: { title: '轮播图管理' }
+            },
+            {
+                path: 'typeDetails',
+                name: 'AdminTypeDetails',
+                component: () => import('../views/admin/TypeDetailsManage.vue'),
+                meta: { title: '前台产品管理' }
             }
         ]
     }

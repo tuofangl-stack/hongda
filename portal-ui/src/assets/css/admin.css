@@ -358,3 +358,9 @@
 .admin-layout .el-button--primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); border: none; }
 .admin-layout .el-button--primary:hover { background: linear-gradient(135deg, #7c7ff5, #9d78fa); }
 .admin-layout .el-pagination { margin-top: 20px; text-align: right; }
+
+/* Submenu */
+.sidebar-menu .el-submenu .el-menu { background: rgba(0,0,0,0.15) !important; }
+.sidebar-menu .el-submenu .el-menu .el-menu-item { padding-left: 44px !important; margin: 1px 12px; height: 44px; line-height: 44px; font-size: 13px; }
+.sidebar-menu .el-submenu__icon-arrow { color: rgba(255,255,255,0.4); }
+

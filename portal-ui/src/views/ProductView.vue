@@ -10,16 +10,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="layout-container" style="width: 100%">
-			<div class="breadcrumb-box">
-				<div class="container">
-					<ol class="am-breadcrumb">
-						<li><router-link to="/">首页</router-link></li>
-						<li class="am-active">产品中心</li>
-					</ol>
-				</div>
-			</div>
-		</div>
 		
 		<div class="section">
 			<div class="container" style="max-width: 1160px">
