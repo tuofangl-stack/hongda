@@ -15,7 +15,7 @@
 				</div>
 				<div class="am-u-md-5 am-u-sm-12">
 					<div class="footer_main--column footer_main--column--brand">
-						<span class="footer_badge">HONGDA</span>
+						<span class="footer_badge">TIANNUO</span>
 						<strong class="footer_main--column_title">{{ $t('footer.aboutHongda') }}</strong>
 						<div class="footer_about">
 							<p class="footer_about--text">{{ $t('footer.aboutText') }}</p>

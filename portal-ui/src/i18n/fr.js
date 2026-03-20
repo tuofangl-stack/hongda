@@ -7,30 +7,30 @@ export default {
     about: 'À propos'
   },
   header: {
-    brandSlogan: 'Fabrication de précision · Pièces de réfrigération de qualité',
-    brandDesc: 'Spécialisé dans les raccords en cuivre pour climatisation automobile avec une livraison fiable.',
+    brandSlogan: 'Fabrication de précision · Composants de communication de qualité',
+    brandDesc: 'Spécialisé dans les composants d\'antennes de communication avec une livraison fiable.',
     hotline: 'Ligne directe',
     hotlineTime: 'Lun - Ven, 08h30 - 17h30',
     factory: 'Usine',
-    factoryAddr: 'Dajing, Miluo, Hunan',
-    factoryName: 'Centre de fabrication Hongda',
+    factoryAddr: 'Shijiao, Qingyuan, Guangdong',
+    factoryName: 'Guangdong Tiannuo Communication Technology',
     contactUs: 'Contactez-nous'
   },
   footer: {
     coreProducts: 'Produits principaux',
-    product1: 'Raccords en cuivre pour climatisation auto',
-    product2: 'Pièces de réfrigération de précision',
+    product1: 'Produits d\'antennes de communication',
+    product2: 'Composants en tôle de précision',
     product3: 'Services de fabrication sur mesure',
-    aboutHongda: 'À propos de Hongda',
-    aboutText: 'Miluo Hongda Réfrigération se spécialise dans la fabrication de raccords en cuivre et de pièces de précision, avec des processus stables et un contrôle qualité rigoureux.',
+    aboutHongda: 'À propos de Tiannuo',
+    aboutText: 'Guangdong Tiannuo Communication Technology se spécialise dans les composants d\'antennes et la tôlerie de précision, fabricant leader en Chine.',
     aboutSubtext: 'Des matières premières à l\'inspection finale, nous perfectionnons chaque étape de production pour une qualité et une efficacité supérieures.',
     contactDetails: 'Coordonnées',
     hotlineLabel: 'Tél : 15111129199',
-    addressLabel: 'Dajing, Miluo, Hunan · Centre Hongda',
+    addressLabel: 'No.5 Innovation Rd, Parc industriel Guangqing, Qingyuan, Guangdong',
     hoursLabel: 'Lun - Ven 08h30 - 17h30',
     inquireNow: 'Nous contacter',
-    copyright: '© 2026 Miluo Hongda Réfrigération · Fabrication de précision et service de qualité',
-    copyrightSub: 'Un savoir-faire stable pour des partenariats durables'
+    copyright: '© 2026 Guangdong Tiannuo Communication Technology · Fabrication de précision et service de qualité',
+    copyrightSub: 'Sincérité et confiance, une promesse qui vaut de l\'or'
   },
   index: {
     heroTitle: 'Fabrication de précision · Assurance qualité',
@@ -50,9 +50,9 @@ export default {
   },
   product: {
     pageTitle: 'Produits',
-    pageSubtitle: 'Fabrication de précision, assurance qualité, solutions fiables pour nos clients.',
+    pageSubtitle: 'Fabrication de précision, assurance qualité, produits d\'antennes fiables pour nos clients.',
     sectionTitle: 'Vitrine des produits',
-    sectionDesc: 'Spécialisé dans la fabrication de raccords en cuivre et pièces de précision avec un savoir-faire d\'excellence.',
+    sectionDesc: 'Spécialisé dans les composants d\'antennes de communication et la tôlerie de précision.',
     tabAll: 'Tous',
     noProducts: 'Aucun produit disponible',
     price: 'Prix'

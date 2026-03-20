@@ -3,10 +3,10 @@
 		<div class="header" :class="{ 'header--compact': isScrolled }">
 			<div class="header-left">
 				<div class="brand-mark">
-					<img src="../../../assets/images/hongdalogo.png" alt="Hongda">
+					<img src="../../../assets/images/hongdalogo.png" alt="Tiannuo">
 				</div>
 				<div class="brand-copy">
-					<span class="brand-copy__eyebrow">HONGDA REFRIGERATION</span>
+					<span class="brand-copy__eyebrow">TIANNUO COMMUNICATION</span>
 					<strong>{{ $t('header.brandSlogan') }}</strong>
 					<p>{{ $t('header.brandDesc') }}</p>
 				</div>

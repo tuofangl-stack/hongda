@@ -10,32 +10,32 @@ export default {
 
   // ========== Header ==========
   header: {
-    brandSlogan: 'Precision Manufacturing · Quality Refrigeration Parts',
-    brandDesc: 'Specializing in automotive AC copper fittings and parts with reliable delivery.',
+    brandSlogan: 'Precision Manufacturing · Quality Communication Parts',
+    brandDesc: 'Specializing in communication antenna components with reliable delivery.',
     hotline: 'Hotline',
     hotlineTime: 'Mon - Fri, 08:30 - 17:30',
     factory: 'Factory',
-    factoryAddr: 'Dajing Town, Miluo, Hunan',
-    factoryName: 'Hongda Refrigeration Manufacturing Center',
+    factoryAddr: 'Shijiao Town, Qingyuan, Guangdong',
+    factoryName: 'Guangdong Tiannuo Communication Technology Co., Ltd.',
     contactUs: 'Contact Us'
   },
 
   // ========== Footer ==========
   footer: {
     coreProducts: 'Core Products',
-    product1: 'Automotive AC Copper Fittings',
-    product2: 'Precision Refrigeration Parts',
+    product1: 'Communication Antenna Products',
+    product2: 'Precision Sheet Metal Components',
     product3: 'Custom Manufacturing Services',
-    aboutHongda: 'About Hongda',
-    aboutText: 'Miluo Hongda Refrigeration specializes in manufacturing automotive AC copper fittings and precision parts, leveraging stable processes, rigorous quality control, and consistent delivery to serve customers.',
-    aboutSubtext: 'From raw materials, processes to final inspection, continuously refining every production step for superior quality and efficiency.',
+    aboutHongda: 'About Tiannuo',
+    aboutText: 'Guangdong Tiannuo Communication Technology Co., Ltd. specializes in communication antenna components and precision sheet metal manufacturing, a leading manufacturer in domestic base station antenna components.',
+    aboutSubtext: 'From raw materials and processes to finished product inspection, we continuously refine every production step to enhance quality and cooperation efficiency.',
     contactDetails: 'Contact Details',
     hotlineLabel: 'Hotline: 15111129199',
-    addressLabel: 'Dajing Town, Miluo, Hunan · Hongda Manufacturing Center',
+    addressLabel: 'No.5 Innovation Rd, Guangqing Industrial Park, Qingyuan, Guangdong',
     hoursLabel: 'Mon - Fri 08:30 - 17:30',
     inquireNow: 'Inquire Now',
-    copyright: '© 2026 Miluo Hongda Refrigeration · Precision Manufacturing & Quality Service',
-    copyrightSub: 'Stable craftsmanship for lasting partnerships'
+    copyright: '© 2026 Guangdong Tiannuo Communication Technology · Precision Manufacturing & Quality Service',
+    copyrightSub: 'Sincerity and trust, a promise worth its weight in gold'
   },
 
   // ========== Index Page ==========
@@ -63,9 +63,9 @@ export default {
   // ========== Product Page ==========
   product: {
     pageTitle: 'Products',
-    pageSubtitle: 'Precision manufacturing, quality assurance, providing reliable supporting solutions for customers.',
+    pageSubtitle: 'Precision manufacturing, quality assurance, providing reliable antenna products for customers.',
     sectionTitle: 'Product Showcase',
-    sectionDesc: 'Specializing in automotive AC copper fittings and precision parts manufacturing with craftsmanship excellence.',
+    sectionDesc: 'Specializing in communication antenna components and precision sheet metal manufacturing.',
     tabAll: 'All',
     noProducts: 'No products available',
     price: 'Price'

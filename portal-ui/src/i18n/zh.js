@@ -7,30 +7,30 @@ export default {
     about: '关于我们'
   },
   header: {
-    brandSlogan: '精密制造 · 品质制冷配件',
-    brandDesc: '专注汽车空调铜件与配件工艺，打造更稳定的交付能力。',
+    brandSlogan: '精密制造 · 品质通讯配件',
+    brandDesc: '专注通信天线零部件制造，打造更稳定的交付能力。',
     hotline: '服务热线',
     hotlineTime: '周一 ~ 周五，08:30 - 17:30',
     factory: '生产基地',
-    factoryAddr: '湖南省汨罗市大荆镇',
-    factoryName: '汨罗市鸿达制冷制造中心',
+    factoryAddr: '广东省清远市清城区石角镇',
+    factoryName: '广东天诺通讯科技有限公司',
     contactUs: '联系我们'
   },
   footer: {
     coreProducts: '核心产品',
-    product1: '汽车空调铜件',
-    product2: '精密制冷配件',
+    product1: '通信天线产品',
+    product2: '精密钣金零部件',
     product3: '定制制造服务',
-    aboutHongda: '关于鸿达制冷',
-    aboutText: '汨罗市鸿达制冷专注汽车空调铜件与精密配件制造，以稳定工艺、严谨品控和持续交付能力服务客户，构建小而专、小而强的制造竞争力。',
+    aboutHongda: '关于天诺通讯',
+    aboutText: '广东天诺通讯科技有限公司专注通信天线零部件与精密钣金制造，是国内基站天线钣金部件第一梯队的主力制造商。',
     aboutSubtext: '从材料、工艺到成品检测，持续打磨每一个生产环节，让产品品质和合作效率同步提升。',
     contactDetails: '联系详情',
     hotlineLabel: '服务热线：15111129199',
-    addressLabel: '湖南省汨罗市大荆镇 · 鸿达制冷制造中心',
+    addressLabel: '广东省清远市清城区石角镇广清产业转移园创新路5号',
     hoursLabel: '周一 ~ 周五 08:30 - 17:30',
     inquireNow: '立即咨询',
-    copyright: '© 2026 汨罗市鸿达制冷 · 精密制造与品质服务',
-    copyrightSub: '以稳定工艺支撑长期合作'
+    copyright: '© 2026 广东天诺通讯科技有限公司 · 精密制造与品质服务',
+    copyrightSub: '以诚待客 一诺千金'
   },
   index: {
     heroTitle: '精密制造 · 品质保障',
@@ -50,9 +50,9 @@ export default {
   },
   product: {
     pageTitle: '产品中心',
-    pageSubtitle: '精密制造，品质保障，为客户提供可靠的配套解决方案。',
+    pageSubtitle: '精密制造，品质保障，为客户提供可靠的通信天线产品。',
     sectionTitle: '产品展示',
-    sectionDesc: '专注汽车空调铜件与精密配件制造，以匠心工艺打造高品质产品。',
+    sectionDesc: '专注通信天线零部件与精密钣金制造，以匠心工艺打造高品质产品。',
     tabAll: '全部',
     noProducts: '暂无产品',
     price: '价格'
@@ -77,7 +77,7 @@ export default {
   },
   news: {
     pageTitle: '公司动态',
-    pageSubtitle: '分享鸿达制冷在产品、制造、合作与服务方面的最新资讯与行业动向。',
+    pageSubtitle: '分享天诺通讯在产品、制造、合作与服务方面的最新资讯与行业动向。',
     sectionTitle: '最近新闻',
     sectionDesc: '云适配与中建材信息技术股份有限公司联合举办的"战略合作签约仪式暨全国跨屏行动启动大会"在北京成功举办。',
     readMore: '查看更多'
