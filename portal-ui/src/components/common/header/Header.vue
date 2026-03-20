@@ -122,17 +122,17 @@ export default {
 }
 
 .brand-mark{
-	width: 48px;
-	height: 48px;
-	border-radius: 14px;
-	background: rgba(7, 18, 32, 0.78);
-	border: 1px solid rgba(112, 166, 255, 0.24);
-	box-shadow: 0 8px 20px rgba(7, 18, 32, 0.14);
-	backdrop-filter: blur(14px);
+	width: 52px;
+	height: 52px;
+	border-radius: 10px;
+	background: #ffffff;
+	border: none;
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 8px;
+	padding: 4px;
+	overflow: hidden;
 }
 
 .brand-mark img{
