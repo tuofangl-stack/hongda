@@ -2,18 +2,9 @@
 	<Layout>
 		<div class="layout-container" style="width: 100%">
 			<div class="page-header">
-				<div class="container">
+				<div class="container" style="text-align: center">
 					<h1 class="page-header-title">公司动态</h1>
 					<p class="page-header-subtitle">分享鸿达制冷在产品、制造、合作与服务方面的最新资讯与行业动向。</p>
-				</div>
-			</div>
-
-			<div class="breadcrumb-box">
-				<div class="container">
-					<ol class="am-breadcrumb">
-						<li><router-link to="/">首页</router-link></li>
-						<li class="am-active">公司动态</li>
-					</ol>
 				</div>
 			</div>
 		</div>

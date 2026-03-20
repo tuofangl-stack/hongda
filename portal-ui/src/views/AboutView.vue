@@ -2,18 +2,9 @@
 	<Layout>
 		<div class="layout-container" style="width: 100%">
 			<div class="page-header">
-				<div class="container">
+				<div class="container" style="text-align: center">
 					<h1 class="page-header-title">关于我们</h1>
 					<p class="page-header-subtitle">专注汽车空调铜件与精密配件制造，持续打磨更稳定的工艺与交付能力。</p>
-				</div>
-			</div>
-
-			<div class="breadcrumb-box">
-				<div class="container">
-					<ol class="am-breadcrumb">
-						<li><router-link to="/">首页</router-link></li>
-						<li class="am-active">关于我们</li>
-					</ol>
 				</div>
 			</div>
 		</div>
