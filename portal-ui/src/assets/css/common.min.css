@@ -70,6 +70,33 @@
         url(../images/pattern-dark.png) #383d61
 }
 
+.page-header .container,
+.page-header > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.solution-page .container {
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.solution-page .container h2,
+.solution-page .container p {
+    text-align: center !important;
+}
+
+.section .container {
+    margin: 0 auto;
+}
+
+
+
 .page-header::before {
     content: "";
     position: absolute;

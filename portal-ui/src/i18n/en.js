@@ -76,7 +76,13 @@ export default {
     sold: 'Sold',
     unit: 'units',
     views: 'Views',
-    times: 'times'
+    times: 'times',
+    specSheet: 'Technical Specifications & Parameters',
+    specTitle: 'Product Specifications',
+    parameter: 'Parameter',
+    value: 'Value',
+    backToList: 'Back to Products',
+    loading: 'Loading...'
   },
 
   // ========== Partners Page ==========

@@ -27,7 +27,7 @@
 								:key="index"
 								@click.prevent="changeTab(tab.typeId)"
 								:class="selectedType === tab.typeId ? 'am-active':''">
-								<a href="#">{{tab.typeName}}</a>
+								<a href="#">{{ localeName(tab.typeName) }}</a>
 							</li>
 						</ul>
 						<div class="am-tabs-bd">
@@ -37,8 +37,7 @@
 									:key="index"
 									@click="handleDetails(goods.productId)">
 									<img :src="goods.cover" alt="">
-									<p>{{goods.name}}</p>
-									<span class="product-price" v-if="goods.price">¥{{Number(goods.price).toLocaleString()}}</span>
+									<p>{{ localeName(goods.name) }}</p>
 								</div>
 							</div>
 							<div v-if="goodsList.length === 0" style="text-align:center;padding:60px 0;color:#999;">
@@ -70,6 +69,13 @@ export default {
 		this.getAllProducts()
 	},
 	methods:{
+		localeName(name) {
+			if (!name) return ''
+			const parts = name.split('/')
+			if (parts.length < 2) return name
+			if (this.$i18n.locale === 'zh') return parts[0].trim()
+			return parts[1].trim()
+		},
 		getTabList(){
 			this.getRequest("/findAllType").then(resp =>{
 				if (resp){

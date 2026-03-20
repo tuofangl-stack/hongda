@@ -61,7 +61,13 @@ export default {
     sold: '已售',
     unit: '台',
     views: '浏览',
-    times: '次'
+    times: '次',
+    specSheet: '技术规格参数',
+    specTitle: '产品参数',
+    parameter: '参数',
+    value: '数值',
+    backToList: '返回产品列表',
+    loading: '加载中...'
   },
   example: {
     pageTitle: '合作案例',

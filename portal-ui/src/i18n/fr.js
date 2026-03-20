@@ -61,7 +61,13 @@ export default {
     sold: 'Vendus',
     unit: 'unités',
     views: 'Vues',
-    times: 'fois'
+    times: 'fois',
+    specSheet: 'Spécifications techniques et paramètres',
+    specTitle: 'Spécifications du produit',
+    parameter: 'Paramètre',
+    value: 'Valeur',
+    backToList: 'Retour aux produits',
+    loading: 'Chargement...'
   },
   example: {
     pageTitle: 'Partenaires',
