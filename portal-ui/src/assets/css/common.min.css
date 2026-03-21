@@ -1,4 +1,18 @@
 
+/* ====== Global Mobile Safety ====== */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /*================================ Header ================================*/
 .header-wrapper{
@@ -178,7 +192,7 @@
 
 @media screen and (max-width: 640px) {
     .section {
-        padding: 48px 0 !important
+        padding: 36px 0 !important
     }
 
     .section .section--header {
@@ -186,29 +200,29 @@
     }
 
     .section .section--header .section--title {
-        font-size: 28px !important
+        font-size: 24px !important
     }
 
     .section .section--header .section--description {
-        font-size: 14px;
-        line-height: 26px
+        font-size: 13px;
+        line-height: 22px
     }
 
     .section--description {
-        font-size: 15px
+        font-size: 13px
     }
 
     .page-header {
-        padding: 78px 0 72px
+        padding: 60px 0 50px
     }
 
     .page-header .page-header-title {
-        font-size: 34px
+        font-size: 26px
     }
 
     .page-header .page-header-subtitle {
-        font-size: 13px;
-        line-height: 22px;
+        font-size: 12px;
+        line-height: 20px;
         padding: 0 16px
     }
 
@@ -216,11 +230,77 @@
         padding: 12px 0 0;
         margin-bottom: 0.75rem
     }
+
+    /* Footer mobile */
+    .footer {
+        margin-top: 24px
+    }
+
+    .footer .footer--inner {
+        padding-top: 10px;
+    }
+
+    .footer .footer--inner .am-g {
+        max-width: 100% !important;
+    }
+
+    .footer .footer_main--column {
+        margin: 24px 15px 0 15px;
+    }
+
+    .footer .footer_main--column_title {
+        font-size: 16px;
+    }
+
+    .footer .footer_about--text {
+        font-size: 13px;
+        line-height: 22px;
+    }
+
+    .footer .footer_navigation--item {
+        padding: 10px 20px 10px 0;
+    }
+
+    .footer .footer_navigation--link {
+        font-size: 13px;
+    }
+
+    .footer .footer_contact_info--item {
+        font-size: 13px;
+        line-height: 20px;
+        padding-bottom: 10px;
+    }
+
+    .footer-bottom {
+        flex-direction: column !important;
+        gap: 4px !important;
+        padding: 16px 15px !important;
+    }
+
+    .footer-bottom span {
+        font-size: 11px !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page-header {
+        padding: 48px 0 40px;
+    }
+
+    .page-header .page-header-title {
+        font-size: 22px;
+    }
+
+    .page-header .page-header-subtitle {
+        font-size: 11px;
+    }
+
+    .section .section--header .section--title {
+        font-size: 20px !important;
+    }
 }
 
 
-
-/*================================ Footer ================================*/
 .footer {
     width: 100%;
     margin-top: 40px;

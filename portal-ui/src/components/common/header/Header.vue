@@ -385,79 +385,160 @@ export default {
 
 @media screen and (max-width: 1024px) {
 	.header{
-		padding: 18px 18px 16px;
-		flex-direction: column;
-		align-items: stretch;
+		padding: 10px 14px 8px;
+		flex-wrap: wrap;
+		gap: 10px;
 	}
 
-	.header-left,
+	.header-left{
+		flex: 1 1 auto;
+	}
+
 	.header-mid{
+		flex: 0 0 auto;
+		order: 3;
+		width: 100%;
 		justify-content: center;
 	}
 
 	.header-right{
-		align-self: center;
+		flex: 0 0 auto;
 	}
 
 	.nav-wrapper{
-		width: calc(100% - 32px);
+		width: calc(100% - 20px);
 	}
 }
 
 @media screen and (max-width: 640px) {
 	.header{
-		padding: 16px 14px 14px;
-		gap: 16px;
+		padding: 8px 10px 6px;
+		flex-wrap: wrap;
+		gap: 8px;
 	}
 
 	.header-left{
-		flex-direction: column;
-		text-align: center;
+		flex: 1;
+		min-width: 0;
 	}
 
 	.brand-mark{
-		width: 64px;
-		height: 64px;
+		width: 40px;
+		height: 40px;
+		border-radius: 8px;
+		padding: 3px;
+	}
+
+	.brand-copy__eyebrow{
+		font-size: 8px;
+		letter-spacing: .15em;
 	}
 
 	.brand-copy strong{
-		font-size: 18px;
+		font-size: 13px;
 	}
 
 	.brand-copy p{
-		font-size: 12px;
+		display: none;
 	}
 
 	.header-mid{
 		width: 100%;
-		gap: 12px;
+		flex-direction: column;
+		gap: 6px;
+		order: 3;
 	}
 
 	.header-item{
 		width: 100%;
-		justify-content: flex-start;
+		padding: 6px 10px;
+		border-radius: 10px;
+	}
+
+	.contact-icon{
+		width: 28px;
+		height: 28px;
+		border-radius: 8px;
+		font-size: 14px;
+	}
+
+	.item-label{
+		font-size: 9px;
+	}
+
+	.item strong{
+		font-size: 12px;
+	}
+
+	.item span{
+		font-size: 10px;
+	}
+
+	.header-right{
+		gap: 6px;
+	}
+
+	.header-cta{
+		padding: 7px 14px;
+		font-size: 11px;
+	}
+
+	.lang-btn{
+		padding: 6px 10px;
+		font-size: 11px;
 	}
 
 	.nav-wrapper{
-		width: calc(100% - 20px);
-		border-radius: 18px;
+		width: calc(100% - 12px);
+		border-radius: 14px;
 	}
 
 	.nav{
-		padding: 0 6px;
+		padding: 0 4px;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.nav .am-nav{
+		flex-wrap: nowrap;
+		white-space: nowrap;
 	}
 
 	.nav .am-nav li{
-		padding: 14px 0;
+		padding: 12px 0;
 	}
 
 	.nav .am-nav li .router{
-		font-size: 13px;
-		letter-spacing: .03em;
+		font-size: 12px;
+		letter-spacing: .02em;
 	}
 
 	.sticky{
-		top: 10px;
+		top: 6px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.brand-copy strong{
+		font-size: 12px;
+	}
+
+	.brand-copy__eyebrow{
+		display: none;
+	}
+
+	.header-cta{
+		padding: 6px 10px;
+		font-size: 10px;
+	}
+
+	.lang-btn{
+		padding: 5px 8px;
+		font-size: 10px;
+	}
+
+	.nav .am-nav li .router{
+		font-size: 11px;
 	}
 }
 </style>

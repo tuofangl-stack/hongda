@@ -372,9 +372,24 @@ export default {
 }
 
 @media screen and (max-width: 640px) {
+	.equip-grid { grid-template-columns: 1fr; gap: 12px; }
+	.partner-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+	.motto-title { font-size: 22px; }
+	.motto-text { font-size: 14px; line-height: 1.7; }
+	.motto-section { padding: 48px 16px; }
+	.biz-card { padding: 24px 18px; }
+	.biz-card__title { font-size: 18px; }
+	.biz-card__text { font-size: 13px; line-height: 1.7; }
+	.biz-card__tags span { font-size: 11px; padding: 4px 10px; }
+	.partner-en { font-size: 16px; }
+	.partner-zh { font-size: 11px; }
+	.partner-card { padding: 20px 12px; }
+}
+
+@media screen and (max-width: 380px) {
+	.partner-grid { grid-template-columns: 1fr; }
 	.equip-grid { grid-template-columns: 1fr; }
-	.partner-grid { grid-template-columns: repeat(2, 1fr); }
-	.motto-title { font-size: 26px; }
-	.motto-text { font-size: 15px; }
+	.biz-card__title { font-size: 16px; }
+	.biz-card__title i { width: 32px; height: 32px; font-size: 16px; }
 }
 </style>

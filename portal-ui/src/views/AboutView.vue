@@ -268,15 +268,59 @@ export default {
 	.values-grid,
 	.biz-grid {
 		grid-template-columns: 1fr;
+		gap: 16px;
 	}
 
 	.cert-row {
-		gap: 10px;
+		gap: 8px;
 	}
 
 	.cert-badge {
-		padding: 8px 14px;
-		font-size: 12px;
+		padding: 6px 12px;
+		font-size: 11px;
+	}
+
+	.about-profile {
+		padding: 0 10px;
+	}
+
+	.about-text {
+		font-size: 14px;
+		line-height: 1.8;
+	}
+
+	.about-text--highlight {
+		padding: 14px 16px;
+		font-size: 14px;
+	}
+
+	.value-card {
+		padding: 28px 20px;
+	}
+
+	.value-title {
+		font-size: 18px;
+	}
+
+	.value-text {
+		font-size: 15px;
+	}
+
+	.biz-card {
+		padding: 24px 18px 20px;
+	}
+
+	.biz-title {
+		font-size: 17px;
+	}
+
+	.biz-desc {
+		font-size: 13px;
+		line-height: 1.7;
+	}
+
+	.biz-num {
+		font-size: 40px;
 	}
 }
 </style>
