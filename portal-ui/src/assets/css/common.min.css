@@ -213,22 +213,22 @@ html, body {
     }
 
     .page-header {
-        padding: 60px 0 50px
+        padding: 40px 0 30px
     }
 
     .page-header .page-header-title {
-        font-size: 26px
+        font-size: 22px
     }
 
     .page-header .page-header-subtitle {
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 11px;
+        line-height: 18px;
         padding: 0 16px
     }
 
     .breadcrumb-box .am-breadcrumb {
-        padding: 12px 0 0;
-        margin-bottom: 0.75rem
+        padding: 8px 0 0;
+        margin-bottom: 0.5rem
     }
 
     /* Footer mobile */
