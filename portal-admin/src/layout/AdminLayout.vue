@@ -1,6 +1,5 @@
 <template>
   <div class="admin-layout">
-    <!-- 侧边栏 -->
     <aside class="admin-sidebar">
       <div class="sidebar-logo">
         <i class="el-icon-s-platform" style="margin-right:8px;"></i>
@@ -32,8 +31,6 @@
         </el-menu>
       </div>
     </aside>
-
-    <!-- 主内容区 -->
     <div class="admin-main">
       <header class="admin-header">
         <div class="header-breadcrumb">
