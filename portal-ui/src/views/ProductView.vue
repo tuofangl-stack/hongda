@@ -201,35 +201,40 @@ export default {
 	border-color: #d2e3fc;
 }
 
+/* Use padding-bottom hack instead of aspect-ratio for compatibility */
 .product-card__img-wrap {
 	width: 100%;
-	aspect-ratio: 1 / 1;
+	height: 0;
+	padding-bottom: 80%;
+	position: relative;
 	overflow: hidden;
 	background: linear-gradient(145deg, #f8f9fa, #eef1f5);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding: 16px;
 }
 
 .product-card__img-wrap img {
-	max-width: 100%;
-	max-height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 85%;
+	max-height: 85%;
+	width: auto;
+	height: auto;
 	object-fit: contain;
 	transition: transform 0.35s ease;
 }
 
 .product-card:hover .product-card__img-wrap img {
-	transform: scale(1.06);
+	transform: translate(-50%, -50%) scale(1.06);
 }
 
 .product-card__body {
-	padding: 16px 18px 20px;
+	padding: 14px 16px 18px;
 	text-align: center;
 }
 
 .product-card__name {
-	font-size: 15px;
+	font-size: 14px;
 	font-weight: 600;
 	color: #202124;
 	margin: 0;
@@ -268,7 +273,7 @@ export default {
 
 @media screen and (max-width: 768px) {
 	.chip-tabs-wrapper {
-		margin: 20px 0 24px;
+		margin: 16px 0 20px;
 	}
 
 	.chip-tabs {
@@ -279,27 +284,26 @@ export default {
 	}
 
 	.chip {
-		padding: 8px 18px;
-		font-size: 13px;
+		padding: 8px 16px;
+		font-size: 12px;
 		flex-shrink: 0;
 	}
 
 	.product-grid {
 		grid-template-columns: repeat(2, 1fr);
-		gap: 12px;
+		gap: 10px;
 	}
 
 	.product-card {
-		border-radius: 12px;
+		border-radius: 10px;
 	}
 
 	.product-card__img-wrap {
-		aspect-ratio: 4 / 3;
-		padding: 10px;
+		padding-bottom: 75%;
 	}
 
 	.product-card__body {
-		padding: 10px 10px 14px;
+		padding: 8px 8px 12px;
 	}
 
 	.product-card__name {
@@ -310,34 +314,29 @@ export default {
 
 @media screen and (max-width: 480px) {
 	.chip {
-		padding: 7px 14px;
-		font-size: 12px;
+		padding: 6px 12px;
+		font-size: 11px;
 	}
 
 	.product-grid {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 10px;
+		gap: 8px;
 	}
 
 	.product-card__img-wrap {
-		aspect-ratio: 1 / 0.85;
-		padding: 8px;
+		padding-bottom: 70%;
+	}
+
+	.product-card__img-wrap img {
+		max-width: 80%;
+		max-height: 80%;
 	}
 
 	.product-card__body {
-		padding: 8px 8px 12px;
+		padding: 6px 6px 10px;
 	}
 
 	.product-card__name {
 		font-size: 11px;
-	}
-
-	.product-empty {
-		padding: 50px 0;
-	}
-
-	.product-empty i {
-		font-size: 40px;
 	}
 }
 </style>
