@@ -40,6 +40,12 @@ const routes = [
         meta: { title: '编辑产品' }
       },
       {
+        path: 'category',
+        name: 'Category',
+        component: () => import('../views/Category.vue'),
+        meta: { title: '分类管理' }
+      },
+      {
         path: 'sale',
         name: 'Sale',
         component: () => import('../views/Sale.vue'),

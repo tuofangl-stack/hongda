@@ -98,6 +98,23 @@ export function deleteSale(id) {
   return api.delete('/admin/sale/' + id)
 }
 
+// ========== 分类管理 ==========
+export function getCategoryList() {
+  return api.get('/admin/category/list')
+}
+
+export function addCategory(data) {
+  return api.post('/admin/category', data)
+}
+
+export function updateCategory(data) {
+  return api.put('/admin/category', data)
+}
+
+export function deleteCategory(id) {
+  return api.delete('/admin/category/' + id)
+}
+
 // ========== 上传 ==========
 export const uploadUrl = '/admin/upload'
 

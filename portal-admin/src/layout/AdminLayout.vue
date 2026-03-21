@@ -21,6 +21,10 @@
             <i class="el-icon-goods"></i>
             <span>产品管理</span>
           </el-menu-item>
+          <el-menu-item index="/category">
+            <i class="el-icon-menu"></i>
+            <span>分类管理</span>
+          </el-menu-item>
           <el-menu-item index="/sale">
             <i class="el-icon-shopping-cart-full"></i>
             <span>销售记录</span>
@@ -56,6 +60,7 @@ export default {
     activeMenu() {
       const path = this.$route.path
       if (path.startsWith('/product')) return '/product'
+      if (path.startsWith('/category')) return '/category'
       if (path.startsWith('/sale')) return '/sale'
       return path
     },
