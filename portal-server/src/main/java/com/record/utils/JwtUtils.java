@@ -80,4 +80,37 @@ public class JwtUtils {
         }
         return null;
     }
+
+    /**
+     * 生成前台用户JWT Token
+     */
+    public static String generateUserToken(Long userId, String username) {
+        Map<String, Object> claims = new HashMap<>();
+        claims.put("userId", userId);
+        claims.put("username", username);
+        claims.put("tokenType", "user");
+
+        return Jwts.builder()
+                .setClaims(claims)
+                .setSubject(username)
+                .setIssuedAt(new Date())
+                .setExpiration(new Date(System.currentTimeMillis() + EXPIRATION))
+                .signWith(SignatureAlgorithm.HS256, SECRET)
+                .compact();
+    }
+
+    /**
+     * 从Token中获取前台用户ID
+     */
+    public static Long getUserIdFromToken(String token) {
+        Claims claims = parseToken(token);
+        if (claims != null) {
+            Object userId = claims.get("userId");
+            if (userId instanceof Integer) {
+                return ((Integer) userId).longValue();
+            }
+            return (Long) userId;
+        }
+        return null;
+    }
 }

@@ -121,6 +121,12 @@
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 
+		<!-- Spring Mail 邮箱验证 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-mail</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>

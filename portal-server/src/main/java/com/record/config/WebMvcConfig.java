@@ -1,6 +1,7 @@
 package com.record.controller;
 
 import com.record.config.AdminLoginInterceptor;
+import com.record.config.UserLoginInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.*;
@@ -10,6 +11,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 
     @Autowired
     private AdminLoginInterceptor adminLoginInterceptor;
+
+    @Autowired
+    private UserLoginInterceptor userLoginInterceptor;
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
@@ -24,6 +28,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/news.html").setViewName("forward:/index.html");
         registry.addViewController("/about").setViewName("forward:/index.html");
         registry.addViewController("/about.html").setViewName("forward:/index.html");
+        registry.addViewController("/login").setViewName("forward:/index.html");
+        registry.addViewController("/register").setViewName("forward:/index.html");
     }
 
     @Override
@@ -31,6 +37,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
         registry.addInterceptor(adminLoginInterceptor)
                 .addPathPatterns("/admin/**")
                 .excludePathPatterns("/admin/login");
+
+        registry.addInterceptor(userLoginInterceptor)
+                .addPathPatterns("/api/user/info");
     }
 
     @Override

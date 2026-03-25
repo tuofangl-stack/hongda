@@ -44,6 +44,12 @@ const routes = [
         name: 'about',
         component: () => import('../views/AboutView.vue')
     },
+    {
+        path: '/login',
+        name: 'UserLogin',
+        component: () => import('../views/UserLogin.vue'),
+        meta: { title: '登录/注册' }
+    },
 
     // ========== 后台管理页面 ==========
     {

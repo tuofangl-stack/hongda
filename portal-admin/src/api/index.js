@@ -124,4 +124,17 @@ export function getUploadHeaders() {
   }
 }
 
+// ========== 用户管理 ==========
+export function getUserList(params) {
+  return api.get('/admin/user/list', { params })
+}
+
+export function updateUserStatus(data) {
+  return api.put('/admin/user/status', data)
+}
+
+export function deleteUser(id) {
+  return api.delete('/admin/user/' + id)
+}
+
 export default api

@@ -50,6 +50,12 @@ const routes = [
         name: 'Sale',
         component: () => import('../views/Sale.vue'),
         meta: { title: '销售记录' }
+      },
+      {
+        path: 'user',
+        name: 'UserManage',
+        component: () => import('../views/UserManage.vue'),
+        meta: { title: '用户管理' }
       }
     ]
   }

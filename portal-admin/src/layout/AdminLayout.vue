@@ -28,6 +28,10 @@
             <i class="el-icon-shopping-cart-full"></i>
             <span>销售记录</span>
           </el-menu-item>
+          <el-menu-item index="/user">
+            <i class="el-icon-user"></i>
+            <span>用户管理</span>
+          </el-menu-item>
         </el-menu>
       </div>
     </aside>
@@ -59,6 +63,7 @@ export default {
       if (path.startsWith('/product')) return '/product'
       if (path.startsWith('/category')) return '/category'
       if (path.startsWith('/sale')) return '/sale'
+      if (path.startsWith('/user')) return '/user'
       return path
     },
     nickname() {

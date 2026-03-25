@@ -67,6 +67,20 @@ spring:
         livereload:
             port: 35730
 
+    # 邮件配置（请替换为真实的SMTP邮箱配置）
+    mail:
+        host: smtp.qq.com
+        port: 587
+        username: your-email@qq.com
+        password: your-smtp-authorization-code
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+                        required: true
+
 
 # MyBatis-Plus
 mybatis-plus:
