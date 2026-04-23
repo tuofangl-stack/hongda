@@ -30,9 +30,9 @@ export default {
 	width: 100%;
 	min-height: 100vh;
 	background:
-		radial-gradient(circle at top left, rgba(71, 157, 255, 0.18), transparent 32%),
-		radial-gradient(circle at 80% 10%, rgba(120, 96, 255, 0.16), transparent 26%),
-		linear-gradient(180deg, #07111f 0%, #0b1526 18%, #eef3fb 46%, #f7faff 100%);
+		radial-gradient(circle at top left, rgba(71, 157, 255, 0.25), transparent 35%),
+		radial-gradient(circle at 80% 10%, rgba(120, 96, 255, 0.20), transparent 30%),
+		linear-gradient(180deg, #e8f4ff 0%, #f0f8ff 30%, #ffffff 70%, #f5faff 100%);
 	overflow: hidden;
 }
 
@@ -88,9 +88,9 @@ export default {
 @media screen and (max-width: 640px) {
 	.page-wrapper{
 		background:
-			radial-gradient(circle at top left, rgba(71, 157, 255, 0.2), transparent 38%),
-			radial-gradient(circle at 80% 10%, rgba(120, 96, 255, 0.14), transparent 32%),
-			linear-gradient(180deg, #07111f 0%, #0b1526 16%, #f2f6fd 42%, #f7faff 100%);
+			radial-gradient(circle at top left, rgba(71, 157, 255, 0.22), transparent 38%),
+			radial-gradient(circle at 80% 10%, rgba(120, 96, 255, 0.16), transparent 32%),
+			linear-gradient(180deg, #e8f4ff 0%, #f0f8ff 25%, #ffffff 60%, #f5faff 100%);
 	}
 
 	.page-background__orb--primary{

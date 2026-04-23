@@ -144,27 +144,27 @@ export default {
 	display: flex;
 	flex-direction: column;
 	gap: 1px;
-	color: #dbe7ff;
+	color: #1a3a5c;
 }
 
 .brand-copy__eyebrow{
 	font-size: 10px;
 	letter-spacing: .22em;
 	text-transform: uppercase;
-	color: rgba(135, 192, 255, 0.72);
+	color: #4a7fc8;
 }
 
 .brand-copy strong{
 	font-size: 16px;
 	line-height: 1.3;
-	color: #ffffff;
+	color: #1a365d;
 }
 
 .brand-copy p{
 	margin: 0;
 	font-size: 11px;
 	line-height: 1.5;
-	color: rgba(219, 231, 255, 0.68);
+	color: #5a7a9a;
 }
 
 .header-mid{
@@ -181,9 +181,9 @@ export default {
 	gap: 10px;
 	padding: 8px 14px;
 	border-radius: 14px;
-	background: rgba(7, 18, 32, 0.6);
-	border: 1px solid rgba(120, 154, 255, 0.18);
-	box-shadow: 0 6px 16px rgba(5, 12, 24, 0.1);
+	background: rgba(255, 255, 255, 0.85);
+	border: 1px solid rgba(120, 154, 255, 0.25);
+	box-shadow: 0 6px 16px rgba(5, 12, 24, 0.06);
 	backdrop-filter: blur(14px);
 }
 
@@ -195,9 +195,9 @@ export default {
 	align-items: center;
 	justify-content: center;
 	font-size: 16px;
-	background: linear-gradient(135deg, rgba(65, 176, 255, 0.18), rgba(122, 100, 255, 0.24));
-	color: #88d4ff;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+	background: linear-gradient(135deg, #4a9eff, #6b7cff);
+	color: #ffffff;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,.2);
 }
 
 .item{
@@ -210,18 +210,18 @@ export default {
 	font-size: 10px;
 	letter-spacing: .14em;
 	text-transform: uppercase;
-	color: rgba(147, 176, 221, 0.72);
+	color: #6b8db5;
 }
 
 .item strong{
 	font-size: 14px;
-	color: #f7fbff;
+	color: #1a365d;
 }
 
 .item span{
 	font-size: 11px;
 	line-height: 1.4;
-	color: rgba(208, 221, 241, 0.72);
+	color: #7a9ab8;
 }
 
 .header-right{
@@ -240,9 +240,9 @@ export default {
 	align-items: center;
 	padding: 7px 12px;
 	border-radius: 999px;
-	background: rgba(7, 18, 32, 0.6);
-	border: 1px solid rgba(120, 154, 255, 0.18);
-	color: rgba(226, 235, 255, 0.85);
+	background: rgba(255, 255, 255, 0.9);
+	border: 1px solid rgba(120, 154, 255, 0.3);
+	color: #1a365d;
 	font-size: 12px;
 	cursor: pointer;
 	transition: all 0.3s ease;
@@ -251,8 +251,8 @@ export default {
 }
 
 .lang-btn:hover {
-	background: rgba(7, 18, 32, 0.8);
-	border-color: rgba(120, 154, 255, 0.36);
+	background: rgba(255, 255, 255, 1);
+	border-color: rgba(74, 158, 255, 0.5);
 }
 
 .lang-dropdown {
@@ -263,10 +263,10 @@ export default {
 	margin: 0;
 	padding: 6px 0;
 	min-width: 140px;
-	background: rgba(10, 20, 38, 0.95);
-	border: 1px solid rgba(120, 154, 255, 0.2);
+	background: rgba(255, 255, 255, 0.98);
+	border: 1px solid rgba(120, 154, 255, 0.25);
 	border-radius: 12px;
-	box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+	box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 	backdrop-filter: blur(18px);
 	z-index: 10000;
 }
@@ -274,18 +274,18 @@ export default {
 .lang-dropdown li {
 	padding: 10px 18px;
 	font-size: 14px;
-	color: rgba(226, 235, 255, 0.75);
+	color: #4a6a8a;
 	cursor: pointer;
 	transition: all 0.2s;
 }
 
 .lang-dropdown li:hover {
 	background: rgba(57, 195, 255, 0.1);
-	color: #fff;
+	color: #1a365d;
 }
 
 .lang-dropdown li.active {
-	color: #39c3ff;
+	color: #2b7de1;
 	font-weight: 600;
 }
 
@@ -315,10 +315,10 @@ export default {
 	width: calc(100% - 48px);
 	max-width: 1240px;
 	margin: 0 auto;
-	border: 1px solid rgba(122, 148, 193, 0.14);
+	border: 1px solid rgba(122, 148, 193, 0.2);
 	border-radius: 24px;
-	background: rgba(7, 18, 32, 0.58);
-	box-shadow: 0 12px 28px rgba(5, 12, 24, 0.14);
+	background: rgba(255, 255, 255, 0.72);
+	box-shadow: 0 12px 28px rgba(5, 12, 24, 0.08);
 	backdrop-filter: blur(18px);
 	transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
@@ -342,7 +342,7 @@ export default {
 	font-size: 15px;
 	font-weight: 600;
 	letter-spacing: .08em;
-	color: rgba(226, 235, 255, 0.76);
+	color: #4a6a8a;
 	background: transparent !important;
 	transition: color .3s ease, transform .3s ease;
 }
@@ -363,7 +363,7 @@ export default {
 
 .nav .am-nav li .router:hover,
 .router.router-link-active{
-	color: #ffffff;
+	color: #1a365d;
 	transform: translateY(-2px);
 }
 
@@ -378,9 +378,9 @@ export default {
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 9999;
-	background: rgba(6, 16, 30, 0.86);
-	border-color: rgba(109, 140, 255, 0.26);
-	box-shadow: 0 24px 48px rgba(4, 10, 20, 0.28);
+	background: rgba(255, 255, 255, 0.95);
+	border-color: rgba(109, 140, 255, 0.35);
+	box-shadow: 0 24px 48px rgba(4, 10, 20, 0.12);
 }
 
 @media screen and (max-width: 1024px) {
