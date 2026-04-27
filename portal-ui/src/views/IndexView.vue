@@ -7,8 +7,7 @@
 					<div class="am-tabs-bd">
 						<div
 							class="am-tab-panel am-active"
-							v-if="slideshow.length > 0"
-							:style="{ backgroundImage: `url(${slideshow[tabIndex].imageUrl})`}">
+							style="background-image: url('/images/products/homeIndex.png')">
 							<div class="index-banner">
 								<div class="index-mask">
 									<div class="container">
@@ -66,6 +65,22 @@
 			</div>
 		</div>
 
+		<!-- ====== Hot Products Showcase ====== -->
+		<div class="section">
+			<div class="container" style="max-width: 1160px;">
+				<div class="section--header">
+					<h2 class="section--title">{{ $t('index.hotProductsTitle') }}</h2>
+					<p class="section--description">{{ $t('index.hotProductsDesc') }}</p>
+				</div>
+
+				<div class="product-grid">
+					<div class="product-item" v-for="(prod, i) in products" :key="'prod'+i">
+						<div class="product-item__img" :style="{ backgroundImage: `url(${prod.img})` }"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- ====== Equipment Showcase ====== -->
 		<div class="section" style="background: linear-gradient(180deg, #f7faff 0%, #eef3fb 100%)">
 			<div class="container" style="max-width: 1160px;">
@@ -76,7 +91,7 @@
 
 				<div class="equip-grid">
 					<div class="equip-item" v-for="(item, index) in equipList" :key="index">
-						<div class="equip-item__img">
+						<div class="equip-item__img" :style="{ backgroundImage: `url(${item.img})` }">
 							<div class="equip-item__overlay">
 								<span class="equip-item__label">{{ item.label }}</span>
 							</div>
@@ -96,8 +111,9 @@
 
 				<div class="partner-grid">
 					<div class="partner-card" v-for="(p, i) in partners" :key="i">
-						<span class="partner-en">{{ p.en }}</span>
-						<span class="partner-zh" v-if="p.zh">{{ p.zh }}</span>
+						<img v-if="p.img" :src="p.img" alt="partner logo" class="partner-logo">
+						<span class="partner-en" v-if="!p.img">{{ p.en }}</span>
+						<span class="partner-zh" v-if="!p.img && p.zh">{{ p.zh }}</span>
 					</div>
 				</div>
 			</div>
@@ -123,27 +139,41 @@ export default {
 		return{
 			tabIndex: 0,
 			slideshow:[],
+			products: [
+				{ img: '/images/products/prod_1.png' },
+				{ img: '/images/products/prod_2.png' },
+				{ img: '/images/products/prod_3.png' },
+				{ img: '/images/products/prod_4.png' },
+				{ img: '/images/products/prod_5.jpg' },
+				{ img: '/images/products/prod_6.jpg' },
+				{ img: '/images/products/prod_7.jpg' },
+				{ img: '/images/products/prod_8.jpg' },
+				{ img: '/images/products/prod_9.jpg' },
+				{ img: '/images/products/prod_10.jpg' },
+				{ img: '/images/products/prod_11.jpg' },
+				{ img: '/images/products/prod_12.jpg' },
+			],
 			equipList: [
-				{ label: 'CNC Punching' },
-				{ label: 'Laser Cutting' },
-				{ label: 'CNC Bending' },
-				{ label: 'Robotic Welding' },
-				{ label: 'CNC Lathe' },
-				{ label: 'Hydraulic Press' },
+				{ label: 'CNC Punching', img: '/images/equip/equip_1.png' },
+				{ label: 'Laser Cutting', img: '/images/equip/equip_2.png' },
+				{ label: 'CNC Bending', img: '/images/equip/equip_3.png' },
+				{ label: 'Robotic Welding', img: '/images/equip/equip_4.png' },
+				{ label: 'CNC Lathe', img: '/images/equip/equip_5.png' },
+				{ label: 'Hydraulic Press', img: '/images/equip/equip_6.png' },
 			],
 			partners: [
-				{ en: 'CICT Mobile', zh: '中信科移动' },
-				{ en: 'ZTE', zh: '中兴' },
-				{ en: 'CETC', zh: '普天科技' },
-				{ en: 'Comba', zh: '京信通信' },
-				{ en: 'ZTT', zh: '中天科技' },
-				{ en: 'TONGYU', zh: '通宇通讯' },
-				{ en: 'FRD', zh: '' },
-				{ en: 'GRENTECH', zh: '国人通信' },
-				{ en: 'BROADRADIO', zh: '' },
-				{ en: 'KBT', zh: '' },
-				{ en: 'YUKE', zh: '邮科通信' },
-				{ en: 'AFX', zh: '安飞信' },
+				{ en: 'CICT Mobile', zh: '中信科移动', img: '/images/partners/partner_1.png' },
+				{ en: 'ZTE', zh: '中兴', img: '/images/partners/partner_2.png' },
+				{ en: 'CETC', zh: '普天科技', img: '/images/partners/partner_3.png' },
+				{ en: 'Comba', zh: '京信通信', img: '/images/partners/partner_4.png' },
+				{ en: 'ZTT', zh: '中天科技', img: '/images/partners/partner_5.png' },
+				{ en: 'TONGYU', zh: '通宇通讯', img: '/images/partners/partner_6.png' },
+				{ en: 'FRD', zh: '', img: '/images/partners/partner_7.png' },
+				{ en: 'GRENTECH', zh: '国人通信', img: '/images/partners/partner_8.png' },
+				{ en: 'BROADRADIO', zh: '', img: '/images/partners/partner_9.png' },
+				{ en: 'KBT', zh: '', img: '/images/partners/partner_10.png' },
+				{ en: 'YUKE', zh: '邮科通信', img: '/images/partners/partner_11.png' },
+				{ en: 'AFX', zh: '安飞信', img: '/images/partners/partner_12.png' },
 			]
 		}
 	},
@@ -244,6 +274,37 @@ export default {
 	border: 1px solid rgba(57, 195, 255, 0.15);
 }
 
+/* ====== Product Grid ====== */
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+	margin-top: 48px;
+}
+
+.product-item {
+	border-radius: 12px;
+	overflow: hidden;
+	position: relative;
+	background: #fff;
+	border: 1px solid #eef2f7;
+	transition: all 0.35s ease;
+}
+
+.product-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+	border-color: rgba(57, 195, 255, 0.25);
+}
+
+.product-item__img {
+	padding-bottom: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: #fff;
+}
+
 /* ====== Equipment Grid ====== */
 .equip-grid {
 	display: grid;
@@ -316,6 +377,13 @@ export default {
 	border-color: rgba(57, 195, 255, 0.28);
 }
 
+.partner-logo {
+	max-width: 100%;
+	height: 60px;
+	object-fit: contain;
+	margin: 0 auto;
+}
+
 .partner-en {
 	font-size: 20px;
 	font-weight: 800;
@@ -367,11 +435,13 @@ export default {
 /* ====== Responsive ====== */
 @media screen and (max-width: 1024px) {
 	.biz-grid { grid-template-columns: 1fr; }
+	.product-grid { grid-template-columns: repeat(3, 1fr); }
 	.equip-grid { grid-template-columns: repeat(2, 1fr); }
 	.partner-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media screen and (max-width: 640px) {
+	.product-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 	.equip-grid { grid-template-columns: 1fr; gap: 12px; }
 	.partner-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
 	.motto-title { font-size: 22px; }

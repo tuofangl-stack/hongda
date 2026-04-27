@@ -46,18 +46,20 @@ export default {
     bizTitle: 'Main Business',
     bizDesc: 'We focus on two core areas: precision components manufacturing and communication antenna products.',
     biz1Title: 'Precision Components',
-    biz1Desc: 'Equipped with CNC punching, CNC bending, CNC shearing, hydraulic press, high-precision CNC lathe, CO2 welding and other professional equipment for sheet metal products, communication parts, microwave antenna components, and hardware stamping products.',
+    biz1Desc: 'We are equipped with industry-leading professional equipment such as CNC punch presses, CNC bending machines, CNC shearing machines, large hydraulic presses, high-precision CNC lathes, and CO₂ shielded arc welding machines. We specialize in manufacturing sheet metal products, communication accessories, a series of microwave antenna components, and other hardware stamping parts.',
     biz2Title: 'Communication Products',
-    biz2Desc: 'Communication antenna products cover frequency range 0.1–20GHz, including base station antennas, parabolic antennas, microwave antennas, short backfire antennas, panel antennas, omnidirectional antennas, aesthetics antennas, and ultra-wideband antenna series. With 64-probe anechoic chamber and three-stage measurement system.',
+    biz2Desc: 'Our communication antenna products cover a frequency range from 0.1 to20GHz, including series such as base station antennas, parabolic antennas,microwave antennas, short backfire antennas, flat panel antennas, various omnidirectional antennas, various decorative antennas, and ultra-wideband antennas. We possess a 64-probe near-field anechoic chamber and test system,various types of microwave anechoic chambers, and a third-order intermodulation test system. Additionally, we are equipped with advanced Anritsu measuring instruments. Our environmental laboratory is fully equipped with experimental devices such as salt spray, high-low temperature constant temperature and humidity, UV weather resistance, and rain simulation testing systems.',
     // Equipment
     equipTitle: 'Production Equipment',
     equipDesc: 'Advanced CNC manufacturing equipment ensures precision and consistency in every product.',
     // Partners
     partnerTitle: 'Cooperation Partners',
     partnerDesc: 'Long-term stable partnerships with leading communication and technology enterprises.',
+    hotProductsTitle: 'Hot Products',
+    hotProductsDesc: 'Selected communication antenna products and components, reliable quality.',
     // Motto
     mottoTitle: 'Our Belief',
-    mottoText: 'Integrity above all, a promise worth its weight in gold! Our advanced, precision sheet metal production line delivers high efficiency, high precision, and low cost — striving to be a pioneer in sheet metal, stamping, and machined component manufacturing.'
+    mottoText: 'Integrity Under Heaven, A Promise Worth a Thousand Gold! Equipped with advanced and precise sheet metal processing production lines, we boast integrated marketing advantages such as high efficiency, high precision and low cost,striving to be a pioneer in the sheet metal, stamping and mechanical processing component manufacturing industry.'
   },
 
   // ========== Product Page ==========
@@ -107,18 +109,18 @@ export default {
     pageTitle: 'About Us',
     pageSubtitle: 'Guangdong Tiannuo Communication Technology Co., Ltd. — A leading manufacturer in antenna components.',
     companyTitle: 'Company Profile',
-    companyText1: 'Guangdong Tiannuo Communication Technology Co., Ltd. was established in March 2015 (formerly Guangzhou Tiannuo Communication Equipment Co., Ltd., founded in November 2006). Located at No.5 Innovation Road, Guangqing Industrial Park, Shijiao Town, Qingcheng District, Qingyuan City, Guangdong Province, covering an area of 32 mu (approx. 21,300 sqm).',
-    companyText2: 'The company is a National High-tech Enterprise, Guangdong Province "Specialized, Refined, Differentiated and Innovative" SME, Guangdong Engineering Technology Research Center, and Qingyuan Engineering Technology R&D Center. We have achieved ISO9001 International Quality Management, ISO14001 Environmental Management, and ISO45001 Occupational Health & Safety certifications. Since 2021, we have been a national defense service unit, and have been consecutively awarded the "Contract-honoring and Credit-worthy" enterprise honor by Guangdong Province.',
-    companyText3: 'With strong technical capabilities and an outstanding management and R&D team, we are one of the few domestic suppliers integrating mobile antenna product R&D, production, testing, and antenna component processing and manufacturing — a leading manufacturer in domestic base station antenna sheet metal components.',
+    companyText1: 'Guangdong Tiannuo Communication Technology Co., Ltd.,founded in March 2015 (originally established as Guangzhou Tiannuo Communication Equipment Co., Ltd. in November 2006), is located at No. 5 Chuangxin Road, Guangqing Industrial Park, Shijiao Town, Qingcheng District, Qingyuan, Guangdong, with a 32-mu site.',
+    companyText2: 'As a national high-tech enterprise, Guangdong “Specialized, Refined,Differential, Innovative” SME, and engineering technology R&D center at provincial and municipal levels, it holds ISO 9001, ISO14001, ISO 45001 certifications, has served as a national defense service unit since 2021, and won the Guangdong “Contract & Credit”Enterprise award for years.',
+    companyText3: 'With strong technical strength and an excellent R&D andmanagement team, the company is a rare domestic supplier integrating finished mobile antenna R&D, production, testing and component manufacturing, and a leading player in China’s base station antenna sheet metal component manufacturing.',
     philosophyTitle: 'Business Philosophy',
     philosophy: 'Treat customers with sincerity, a promise is worth its weight in gold',
     cultureTitle: 'Corporate Culture',
     culture: 'People-oriented, Technology-driven Innovation',
     bizTitle: 'Main Business',
     biz1Title: 'Precision Components',
-    biz1Desc: 'Equipped with CNC punching, CNC bending, CNC shearing, hydraulic press, high-precision CNC lathe, CO2 welding and other professional equipment for sheet metal products, communication parts, microwave antenna components, and hardware stamping products.',
+    biz1Desc: 'We are equipped with industry-leading professional equipment such as CNC punch presses, CNC bending machines, CNC shearing machines, large hydraulic presses, high-precision CNC lathes, and CO₂ shielded arc welding machines. We specialize in manufacturing sheet metal products, communication accessories, a series of microwave antenna components, and other hardware stamping parts.',
     biz2Title: 'Communication Products',
-    biz2Desc: 'Communication antenna products cover frequency range 0.1–20GHz, including base station antennas, parabolic antennas, microwave antennas, short backfire antennas, panel antennas, omnidirectional antennas, aesthetics antennas, and ultra-wideband antenna series. With 64-probe anechoic chamber and three-stage measurement system.'
+    biz2Desc: 'Our communication antenna products cover a frequency range from 0.1 to20GHz, including series such as base station antennas, parabolic antennas,microwave antennas, short backfire antennas, flat panel antennas, various omnidirectional antennas, various decorative antennas, and ultra-wideband antennas. We possess a 64-probe near-field anechoic chamber and test system,various types of microwave anechoic chambers, and a third-order intermodulation test system. Additionally, we are equipped with advanced Anritsu measuring instruments. Our environmental laboratory is fully equipped with experimental devices such as salt spray, high-low temperature constant temperature and humidity, UV weather resistance, and rain simulation testing systems.'
   },
 
   // ========== Language Switcher ==========
